@@ -1,4 +1,27 @@
 .container {
     height: 60px;
-    background-color: black;
+    background-color: aliceblue;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leftContainer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.searchContainer {
+    flex: 1;
+    border: 0.5px solid gray;
+    display: flex;
+    align-items: center;
+}
+
+.rightContainer {
+    flex: 1;
+    display: flex;
+    align-items: center;
 }
