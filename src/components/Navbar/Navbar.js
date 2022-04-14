@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Navbar.module.css";
-
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
@@ -12,9 +12,9 @@ export default function Navbar() {
         <input type="text" placeholder="Search ...."></input>
       </div>
       <div className={styles.rightContainer}>
-        <p>Signup</p>
-        <p>Login</p>
-        <p>Cart</p>
+        <Link to='/signup'>Signup</Link>
+        <Link to='/login'>Login</Link> 
+        <Link to='/cart'>Cart</Link>  
       </div>
     </div>
   );

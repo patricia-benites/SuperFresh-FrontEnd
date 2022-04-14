@@ -1,10 +1,12 @@
-import React from 'react'
-import Navbar from '../../components/Navbar/Navbar'
+import React from "react";
+import { Announcement } from "../../components/Announcement/Announcement";
+import Navbar from "../../components/Navbar/Navbar";
 
 export default function Home() {
   return (
     <div>
-        <Navbar/>
+      <Announcement />
+      <Navbar />
     </div>
-  )
+  );
 }
