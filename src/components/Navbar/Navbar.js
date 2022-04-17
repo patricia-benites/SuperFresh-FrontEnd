@@ -12,8 +12,8 @@ export default function Navbar() {
         <input type="text" placeholder="Search ...."></input>
       </div>
       <div className={styles.rightContainer}>
-        <Link to='/signup'>Signup</Link>
-        <Link to='/login'>Login</Link> 
+        <Link to='/signup'>REGISTER</Link>
+        <Link to='/login'>LOGIN</Link> 
         <Link to='/cart'>Cart</Link>  
       </div>
     </div>

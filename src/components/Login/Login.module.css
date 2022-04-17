@@ -1,0 +1,38 @@
+.container {
+    background: linear-gradient(
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.5)),
+    url("https://images-prod.healthline.com/hlcmsresource/images/AN_images/blueberries-1296x728-feature.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.loginForm {
+    width: 40%;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  
+  }
+
+  button {
+    width: 60%;
+    border: none;
+    padding: 15px 20px;
+    background-color: rgb(106, 106, 167);
+    color: white;
+    cursor: pointer;
+  }
+
+  .Link {
+    margin: 5px 0px;
+    font-size: 12px;
+    text-decoration: none;
+    cursor: pointer;
+  }
