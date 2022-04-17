@@ -5,16 +5,19 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Login } from './components/Login/Login';
 import { Signup } from './components/Signup/Signup';
 import Home from './pages/Home/Home';
+import { AuthContextProvider } from "./context/context";
 
 
 ReactDOM.render(
   <React.StrictMode>
   <BrowserRouter>
+    <AuthContextProvider>
       <Routes>
-        <Route path='/home' element={<Home/>}/>
-        <Route path='/signup' element={<Signup/>}/>
-        <Route path='/login' element={<Login/>}/>
+            <Route path='/home' element={<Home/>}/>
+            <Route path='/signup' element={<Signup/>}/>
+            <Route path='/login' element={<Login/>}/>
       </Routes>
+    </AuthContextProvider>  
   </BrowserRouter>
 </React.StrictMode>,
   document.getElementById('root')
