@@ -48,7 +48,7 @@ export function AuthContextProvider({ children }) {
       setUser(response.data.user);
       navigate("/home");
     } catch (error) {
-      navigate("/landing");
+      navigate("/home");
     }
   };
 
