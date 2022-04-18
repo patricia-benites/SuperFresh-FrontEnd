@@ -23,6 +23,9 @@ export function AuthContextProvider({ children }) {
       email,
       password,
     });
+    if (response.status === 200) {
+      navigate("/login");
+    }
   };
 
   const login = async (email, password) => {
@@ -43,9 +46,9 @@ export function AuthContextProvider({ children }) {
     try {
       const response = await client.get("/auth/verify");
       setUser(response.data.user);
-      navigate("/");
-    } catch (error) {
       navigate("/home");
+    } catch (error) {
+      navigate("/landing");
     }
   };
 

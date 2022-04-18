@@ -12,9 +12,10 @@ export default function Navbar() {
         <input type="text" placeholder="Search ...."></input>
       </div>
       <div className={styles.rightContainer}>
+      
         <Link to='/signup'>REGISTER</Link>
         <Link to='/login'>LOGIN</Link> 
-        <Link to='/cart'>Cart</Link>  
+        <Link to='/cart'>CART</Link>  
       </div>
     </div>
   );
