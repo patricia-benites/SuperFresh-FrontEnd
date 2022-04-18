@@ -6,6 +6,7 @@ import { AuthContext } from "../../context/context";
 import { ListOfProducts } from "../../components/ListOfProducts/ListOfProducts";
 import { useEffect, useState } from "react";
 import { client } from "../../client";
+import { Footer } from "../../components/Footer/Footer";
 
 export default function Home() {
   const { user } = useContext(AuthContext);
@@ -28,6 +29,7 @@ export default function Home() {
       <ListOfProducts products={products}/>
       {/* <code>{JSON.stringify(user.firstName)}</code> */}
       {/* <Slider /> */}
+      <Footer/>
     </div>
   );
 }
