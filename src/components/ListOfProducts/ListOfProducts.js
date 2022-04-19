@@ -8,6 +8,7 @@ export function ListOfProducts({ products }) {
         return (
           <Product
             key={product._id}
+            id={product._id}
             image={product.image}
             title={product.title}
             description={product.description}
