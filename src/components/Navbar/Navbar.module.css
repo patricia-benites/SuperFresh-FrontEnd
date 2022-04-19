@@ -1,7 +1,8 @@
 .container {
-    height: 60px;
-    background-color: white;
-    border: 1px solid gray;
+    height: 60px;   
+}
+
+.wrapper {
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -20,12 +21,14 @@
     flex: 1;
     display: flex;
     align-items: center;
-    border: 0.5px solid gray;
-    gap: 5px;
+    border: 0.5px solid lightgray;
+    margin-left: 25px;
+    padding: 5px;
 }
 
-input {
+.searchContainer input {
     width: 100%;
+    border: none;
 }
 
 .rightContainer {
@@ -37,6 +40,6 @@ input {
     justify-content: flex-end;
     vertical-align: middle;
     line-height: 24px;
-    color: greenyellow;
     text-decoration: none;
+    cursor: pointer;
 }

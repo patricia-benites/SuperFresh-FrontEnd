@@ -19,12 +19,13 @@ export default function Home() {
   }, []);
   return (
     <div>
+      <Navbar />
       <Announcement />
-      <Navbar/>
-      <ListOfProducts products={products}/>
+
+      <ListOfProducts products={products} />
       {/* <code>{JSON.stringify(user.firstName)}</code> */}
       {/* <Slider /> */}
-      <Footer/>
+      <Footer />
     </div>
   );
 }
