@@ -6,6 +6,7 @@ import Navbar from '../../components/Navbar/Navbar'
 // import { useContext } from "react";
 import { useEffect, useState } from "react";
 import { client } from "../../client";
+import { Newsletter } from '../../components/Newsletter/Newsletter';
 
 export function Cart() {
   const [cart, setCart] = useState([]);
@@ -32,6 +33,7 @@ export function Cart() {
         </div>
         <div className='rightContainer'></div>
         </div>
+        <Newsletter/>
         <Footer/>
     </div>
   )

@@ -18,7 +18,8 @@ export function Footer() {
       </div>
       <div className={styles.rightContainer}>
       <h3>Contact</h3>
-        <GrPhone/> +1 234 56 78
+    
+        <GrPhone /> <span>  +1 234 56 78</span>
         <GrMailOption/> contact@superfresh.com
         </div>
     </div>
