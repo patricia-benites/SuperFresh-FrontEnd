@@ -4,22 +4,23 @@ import { Footer } from '../../components/Footer/Footer'
 import Navbar from '../../components/Navbar/Navbar'
 // import { AuthContext } from "../../context/context";
 // import { useContext } from "react";
-import { useEffect, useState } from "react";
-import { client } from "../../client";
-import { Newsletter } from '../../components/Newsletter/Newsletter';
+// import { useEffect, useState } from "react";
+// import { client } from "../../client";
 import styles from "./Cart.module.css"
+import CartProduct from "../../components/CartProduct/CartProduct"
+import SummaryItem from '../../components/SummaryItem/SummaryItem'
 
 export function Cart() {
-  const [cart, setCart] = useState([]);
+  // const [cart, setCart] = useState([]);
 
-  const getCart = async () => {
-    const result = await client.get("/carts/find");
-    setCart(result.data);
-  };
+  // const getCart = async () => {
+  //   const result = await client.get("/carts/find");
+  //   setCart(result.data);
+  // };
 
-  useEffect(() => {
-    getCart();
-  }, []);
+  // useEffect(() => {
+  //   getCart();
+  // }, []);
 
 
   return (
@@ -36,7 +37,24 @@ export function Cart() {
             </div>
             <button className={styles.rightButton}>CHECKOUT NOW</button>
           </div>
-         <div className='rightContainer'></div>
+          <div className={styles.bottomContainer}>
+            <div className={styles.infoContainer}>
+              <CartProduct/>
+              <hr className={styles.hrSeparator}></hr>
+              <CartProduct/>
+              <hr className={styles.hrSeparator}></hr>
+              <CartProduct/>
+            </div>
+            <div className={styles.summaryContainer}>
+              <h2>Order Summary</h2>
+              <SummaryItem text={"Subtotal"} value={"20"}/>
+              <SummaryItem text={"Shipping Costs"} value={"5.50"}/>
+              <SummaryItem text={"Shipping Discount"} value={"- 5.50"}/>
+              <SummaryItem type={"total"} text={"Total"} value={"20"}/>
+              <button className={styles.summaryButton}>CHECKOUT NOW</button>
+            </div>
+           
+          </div>
           </div>
         <Footer/>
     </div>

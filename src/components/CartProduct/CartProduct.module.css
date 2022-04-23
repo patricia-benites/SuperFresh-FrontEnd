@@ -1,0 +1,38 @@
+.cartProductContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.productDetail {
+    flex: 1;
+    display: flex;
+}
+
+.productDetail span {
+    padding: 20px;
+}
+
+.priceDetail {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.productAmountContainer {
+    display: flex;
+    align-items: center;
+}
+
+.productAmountContainer div {
+    font-size: 20px;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+
+.productPrice {
+    font-size: 20px;
+    font-weight: 200;
+}
