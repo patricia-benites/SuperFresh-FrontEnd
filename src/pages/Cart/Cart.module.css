@@ -1,0 +1,40 @@
+.pageContainer {
+
+}
+
+.cartContainer {
+    padding: 20px;
+}
+
+.cartContainer h2 {
+    text-align: center;
+}
+
+.topContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.topContainer span {
+  text-decoration: underline;
+  cursor: pointer;
+  margin: 0px 10px;
+}
+
+.leftButton {
+  padding: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.rightButton {
+  padding: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  background-color: black;
+  color: white;
+}

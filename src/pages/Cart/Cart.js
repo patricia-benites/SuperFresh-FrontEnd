@@ -7,6 +7,7 @@ import Navbar from '../../components/Navbar/Navbar'
 import { useEffect, useState } from "react";
 import { client } from "../../client";
 import { Newsletter } from '../../components/Newsletter/Newsletter';
+import styles from "./Cart.module.css"
 
 export function Cart() {
   const [cart, setCart] = useState([]);
@@ -22,18 +23,21 @@ export function Cart() {
 
 
   return (
-    <div>
+    <div className={styles.pageContainer}>
         <Announcement/>
         <Navbar/>
-        <div className='cartContainer'>
-        <h2>Your Shopping Cart</h2>
-        <div className='leftContainer'>
-        <code>{JSON.stringify(cart)}</code>
-          
-        </div>
-        <div className='rightContainer'></div>
-        </div>
-        <Newsletter/>
+        <div className={styles.cartContainer}>
+          <h2>Your Shopping Cart</h2>
+          <div className={styles.topContainer}>
+            <button className={styles.leftButton}>CONTINUE SHOPPING</button>
+            <div>
+              <span>Shopping Cart</span>
+              <span>Save for Later</span>
+            </div>
+            <button className={styles.rightButton}>CHECKOUT NOW</button>
+          </div>
+         <div className='rightContainer'></div>
+          </div>
         <Footer/>
     </div>
   )

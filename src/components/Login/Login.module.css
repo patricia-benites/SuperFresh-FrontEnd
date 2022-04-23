@@ -2,7 +2,7 @@
     background: linear-gradient(
     rgba(255, 255, 255, 0.5),
     rgba(255, 255, 255, 0.5)),
-    url("https://images-prod.healthline.com/hlcmsresource/images/AN_images/blueberries-1296x728-feature.jpg");
+    url("https://www.seriouseats.com/thmb/GTMn_mwXk7a2Yr8Ul7g_1YNvGAk=/1500x1125/filters:fill(auto,1)/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2015__02__20150228-vegan-loaded-queso-dip7-a5de9d77868040ccb3148ca6bc80b188.jpg ");
     background-size: cover;
     display: flex;
     align-items: center;
@@ -21,11 +21,11 @@
   
   }
 
-  button {
+  .loginForm button {
     width: 60%;
     border: none;
     padding: 15px 20px;
-    background-color: rgb(106, 106, 167);
+    background-color: yellowgreen;
     color: white;
     cursor: pointer;
   }
@@ -35,4 +35,5 @@
     font-size: 12px;
     text-decoration: none;
     cursor: pointer;
+    color: black;
   }
