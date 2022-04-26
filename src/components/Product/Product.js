@@ -9,7 +9,7 @@ export function Product({ id, image, title, description, price }) {
 
   const addToCart = async () => {
     const existingCart = await client.get(`/carts/find/${user._id}`);
-    console.log(existingCart)
+    console.log(existingCart);
     let updatedProducts;
     if (existingCart.data) {
       const products = existingCart.data.products;
@@ -28,12 +28,15 @@ export function Product({ id, image, title, description, price }) {
       } else {
         updatedProducts = [...products, { productId: `${id}` }];
       }
-      const patchResult = await client.patch(`/carts/${existingCart.data._id}`, {
+      await client.patch(`/carts/${existingCart.data._id}`, {
         userId: user._id,
         products: updatedProducts,
       });
     } else {
-      const postResult = await client.post("/carts", {"userId":user._id, "products":[{"productId":`${id}`}]})
+      await client.post("/carts", {
+        userId: user._id,
+        products: [{ productId: `${id}` }],
+      });
     }
   };
 

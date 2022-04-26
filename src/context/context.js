@@ -60,7 +60,7 @@ export function AuthContextProvider({ children }) {
 
   useEffect(() => {
     verify();
-  }, []);
+  },[]);
 
   const value = {
     user,
