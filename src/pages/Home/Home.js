@@ -11,8 +11,10 @@ export default function Home() {
   const [products, setProducts] = useState([]);
 
   const getProducts = async () => {
-    const result = await client.get("/products/find");
-    setProducts(result.data);
+    try {
+      const result = await client.get("/products/find");
+      setProducts(result.data);
+    } catch (error) {}
   };
 
   useEffect(() => {
@@ -22,11 +24,8 @@ export default function Home() {
     <div>
       <Navbar />
       <Announcement />
-
       <ListOfProducts products={products} />
-      {/* <code>{JSON.stringify(user.firstName)}</code> */}
-      {/* <Slider /> */}
-      <Newsletter/>
+      <Newsletter />
       <Footer />
     </div>
   );

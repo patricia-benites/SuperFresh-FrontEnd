@@ -4,7 +4,7 @@ import {AiOutlineShoppingCart, AiOutlineSearch} from "react-icons/ai"
 
 export default function Navbar() {
   return (
-    <div className={styles.container}>
+    <div className={styles.navbarContainer}>
       <div className={styles.wrapper}>
           <div className={styles.leftContainer}>
             <h1>SuperFresh</h1>
