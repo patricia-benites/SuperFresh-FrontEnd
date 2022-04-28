@@ -15,12 +15,12 @@ export function Product({ id, image, title, description, price }) {
       const products = existingCart.data.products;
       console.log(products);
       const isProductPresent = products.some(
-        (product) => product.productId === id
+        (product) => product.productId._id === id
       );
       console.log(isProductPresent);
       if (isProductPresent) {
         updatedProducts = products.map((product) => {
-          if (product.productId === id) {
+          if (product.productId._id === id) {
             product.quantity = product.quantity += 1;
           }
           return product;

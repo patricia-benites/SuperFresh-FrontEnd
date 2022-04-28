@@ -1,27 +1,32 @@
 import React from "react";
 import styles from "./CartProduct.module.css";
 import { GrFormAdd, GrFormSubtract} from "react-icons/gr";
+import { useState } from "react/cjs/react.production.min";
 
-export default function CartProduct(props) {
+export default function CartProduct({product, changeQuantity}) {
+  
+
+
+  console.log(product)
   return (
     <div className={styles.cartProductContainer}>
       <div className={styles.productDetail}>
         <img
-          src="https://cdn.potatopro.com/cdn/ff/f9ZHyiImXygGg6tcrN647LsUuGoeMdaHY-6iJaKEZtI/1633361359/public/styles/1200_wide/public/field/image/russian-potato-market-prices-are-growing-every-day-1200.jpg?itok=HIIxz33e"
-          alt="https://cdn.potatopro.com/cdn/ff/f9ZHyiImXygGg6tcrN647LsUuGoeMdaHY-6iJaKEZtI/1633361359/public/styles/1200_wide/public/field/image/russian-potato-market-prices-are-growing-every-day-1200.jpg?itok=HIIxz33e"
+          src={product.productId.image}
+          alt={product.productId.image}
           style={{ width: "150px" }}
         ></img>
         <span>
-          <b>Product:</b>Title
+          <b>Product: {product.productId.title}</b>
         </span>
       </div>
       <div className={styles.priceDetail}>
         <div className={styles.productAmountContainer}>
-          <div><GrFormAdd/></div>
-          <div>2</div>
-          <div><GrFormSubtract/></div>
+          <button onClick={()=>{changeQuantity(product.productId._id, 1)}}><GrFormAdd /></button>
+          <div>{product.quantity}</div>
+          <button onClick={()=>{changeQuantity(product.productId._id, -1)}}><GrFormSubtract/></button>
         </div>
-        <div className={styles.productPrice}>$ 20</div>
+        <div className={styles.productPrice}>{`$ ${product.productId.price}`}</div>
       </div>
     </div>
   );
