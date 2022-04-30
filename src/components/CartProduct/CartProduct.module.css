@@ -28,7 +28,7 @@
 .productAmountContainer div {
     font-size: 20px;
     font-weight: 200;
-    margin-bottom: 20px;
+    margin: 0px 10px;
 }
 
 .productPrice {

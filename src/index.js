@@ -8,6 +8,7 @@ import Home from "./pages/Home/Home";
 import { AuthContextProvider } from "./context/context";
 import { Cart } from "./pages/Cart/Cart";
 import { NotFound } from "./pages/NotFound/NotFound.js";
+import Checkout from "./pages/Checkout/Checkout"
 
 ReactDOM.render(
   <React.StrictMode>
@@ -19,6 +20,7 @@ ReactDOM.render(
             <Route path="signup" element={<Signup />} />
             <Route path="login" element={<Login />} />
             <Route path="cart" element={<Cart />} />
+            <Route path="checkout" element={<Checkout />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

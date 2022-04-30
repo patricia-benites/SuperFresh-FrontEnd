@@ -5,12 +5,13 @@ import { client } from "../../client";
 import styles from "./Cart.module.css";
 import CartProduct from "../../components/CartProduct/CartProduct";
 import SummaryItem from "../../components/SummaryItem/SummaryItem";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export function Cart() {
   const { user } = useContext(AuthContext);
   const [cart, setCart] = useState([]);
   const [subtotal, setSubtotal] = useState(0);
+  const navigate = useNavigate();
   console.log(user);
   console.log("cart", cart);
 
@@ -24,7 +25,7 @@ export function Cart() {
   const calculateSubtotal = () => {
     if (cart.products) {
     setSubtotal(cart.products.reduce((acc, product)=>{
-      return acc + (product.quantity * product.productId.price)
+      return Math.round((acc + (product.quantity * product.productId.price))*100)/100
     },0))
     console.log("subtotal",subtotal)
   }
@@ -57,7 +58,6 @@ export function Cart() {
       }
       console.log("depopulated",depopulatedCart);
       client.patch(`/carts/${newCart._id}`,depopulatedCart)
-      // calculateSubtotal();
       return newCart;
     });
     
@@ -73,6 +73,9 @@ export function Cart() {
     calculateSubtotal();
   },[cart])
 
+  const handleCheckout = () => {
+    navigate("/checkout");
+  }
   
   return (
     <div className={styles.pageContainer}>
@@ -86,7 +89,7 @@ export function Cart() {
           </button>
           <div>
           </div>
-          <button className={styles.rightButton}>CHECKOUT NOW</button>
+          <button onClick={()=>handleCheckout()}className={styles.rightButton}>CHECKOUT NOW</button>
         </div>
         <div className={styles.bottomContainer}>
           <div className={styles.infoContainer}>
@@ -115,7 +118,7 @@ export function Cart() {
               <SummaryItem text={"Shipping Discount"} value={"- 2.50"} />
             )}
             <SummaryItem type={"total"} text={"Total"} value={subtotal} />
-            <button className={styles.summaryButton}>CHECKOUT NOW</button>
+            <button  onClick={()=>handleCheckout()}className={styles.summaryButton}>CHECKOUT NOW</button>
           </div>
         </div>
       </div>
