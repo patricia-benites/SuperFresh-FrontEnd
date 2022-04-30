@@ -75,6 +75,7 @@ export function Cart() {
 
   const handleCheckout = () => {
     navigate("/checkout");
+    client.delete(`/carts/${cart._id}`)
   }
   
   return (
