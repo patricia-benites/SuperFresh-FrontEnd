@@ -1,7 +1,3 @@
-import React from "react";
-import { Announcement } from "../../components/Announcement/Announcement";
-import { Footer } from "../../components/Footer/Footer";
-import Navbar from "../../components/Navbar/Navbar";
 import { AuthContext } from "../../context/context";
 import { useContext } from "react";
 import { useEffect, useState } from "react";
@@ -80,8 +76,6 @@ export function Cart() {
   
   return (
     <div className={styles.pageContainer}>
-      <Announcement />
-      <Navbar />
       <div className={styles.cartContainer}>
         <h2>Your Shopping Cart</h2>
         <div className={styles.topContainer}>
@@ -91,8 +85,6 @@ export function Cart() {
             </Link>
           </button>
           <div>
-            <span>Shopping Cart</span>
-            <span>Save for Later</span>
           </div>
           <button className={styles.rightButton}>CHECKOUT NOW</button>
         </div>
@@ -127,7 +119,6 @@ export function Cart() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

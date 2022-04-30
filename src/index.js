@@ -1,28 +1,29 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-// import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Login } from './components/Login/Login';
-import { Signup } from './components/Signup/Signup';
-import Home from './pages/Home/Home';
+import { Login } from "./components/Login/Login";
+import { Signup } from "./components/Signup/Signup";
+import Home from "./pages/Home/Home";
 import { AuthContextProvider } from "./context/context";
-import { Landing } from './pages/Landing/Landing';
-import { Cart } from './pages/Cart/Cart';
-
+import { Cart } from "./pages/Cart/Cart";
+import { NotFound } from "./pages/NotFound/NotFound.js";
 
 ReactDOM.render(
   <React.StrictMode>
-  <BrowserRouter>
-    <AuthContextProvider>
-      <Routes>
-            <Route path='/home' element={<Home/>}/>
-            <Route path='/landing' element={<Landing/>}/>
-            <Route path='/signup' element={<Signup/>}/>
-            <Route path='/login' element={<Login/>}/>
-            <Route path='/cart' element={<Cart/>}/>
-      </Routes>
-    </AuthContextProvider>  
-  </BrowserRouter>
-</React.StrictMode>,
-  document.getElementById('root')
+    <BrowserRouter>
+      <AuthContextProvider>
+        <Routes>
+          <Route path="/" element={<App />}>
+            <Route path="home" element={<Home />} />
+            <Route path="signup" element={<Signup />} />
+            <Route path="login" element={<Login />} />
+            <Route path="cart" element={<Cart />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
+        </Routes>
+      </AuthContextProvider>
+    </BrowserRouter>
+  </React.StrictMode>,
+  document.getElementById("root")
 );
