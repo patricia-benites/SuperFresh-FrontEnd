@@ -37,9 +37,6 @@ export function Login() {
           placeholder="password"
         ></input>
         <button>LOGIN</button>
-        <Link to="/home" className={styles.Link}>
-          DO NOT REMEMBER THE PASSWORD?
-        </Link>
         <Link to="/signup" className={styles.Link}>
           CREATE A NEW ACCOUNT
         </Link>

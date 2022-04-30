@@ -1,5 +1,5 @@
 import styles from "./Product.module.css";
-import { AiOutlineShoppingCart, AiOutlineHeart } from "react-icons/ai";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 import { client } from "../../client";
 import { useContext } from "react";
 import { AuthContext } from "../../context/context";
@@ -51,8 +51,7 @@ export function Product({ id, image, title, description, price }) {
         <p>{` € ${price}`}</p>
       </div>
       <div className={styles.iconsContainer}>
-        <AiOutlineShoppingCart size="1em" onClick={addToCart} />
-        <AiOutlineHeart />
+      <button><AiOutlineShoppingCart size="1em" onClick={addToCart} /></button>
       </div>
     </div>
   );

@@ -14,6 +14,10 @@ export default function Navbar() {
             <AiOutlineSearch style={{color:"gray", fontSize: "16px"}}/>
           </div>
           <div className={styles.rightContainer}>
+            <div className="user">
+              <span>Hello </span>
+              <span>Patricia</span>
+            </div>
             <Link to='/signup' style={{color:"black"}} >REGISTER</Link>
             <Link to='/login' style={{color:"black"}}>LOGIN</Link> 
             <Link to='/cart'><AiOutlineShoppingCart size="1.3em" style={{color:"black"}}/></Link>  
