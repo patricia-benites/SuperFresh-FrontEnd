@@ -23,6 +23,7 @@ export default function Navbar() {
             </div>}
             {!user && <Link to='/signup' style={{color:"black"}} >REGISTER</Link>}
             {!user && <Link to='/login' style={{color:"black"}}>LOGIN</Link> }
+            {user && <Link to='/logout' style={{color:"black"}}>LOGOUT</Link> }
             <Link to='/cart'><AiOutlineShoppingCart size="1.3em" style={{color:"black"}}/></Link>  
           </div>
       </div>
