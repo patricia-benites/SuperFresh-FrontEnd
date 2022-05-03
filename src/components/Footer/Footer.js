@@ -21,6 +21,7 @@ export function Footer() {
         <h2>Useful Links</h2>
          <Link to="/home" style={{color:"black", textDecoration:"none"}}>Home</Link>
          <Link to='/cart'><AiOutlineShoppingCart  size="1.3em" style={{color:"black", textDecoration:"none"}}/></Link> 
+         <Link to="/pay" style={{color:"black", textDecoration:"none"}}>Pay</Link>
       </div>
       <div className={styles.rightContainer}>
       <h2>Contact</h2>

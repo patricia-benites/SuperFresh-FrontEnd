@@ -10,6 +10,7 @@ import { AuthContextProvider } from "./context/context";
 import { Cart } from "./pages/Cart/Cart";
 import { NotFound } from "./pages/NotFound/NotFound.js";
 import Checkout from "./pages/Checkout/Checkout"
+import {Pay} from "./components/Pay/Pay"
 
 ReactDOM.render(
   <React.StrictMode>
@@ -23,6 +24,7 @@ ReactDOM.render(
             <Route path="logout" element={<Logout />} />
             <Route path="cart" element={<Cart />} />
             <Route path="checkout" element={<Checkout />} />
+            <Route path="pay" element={<Pay />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
