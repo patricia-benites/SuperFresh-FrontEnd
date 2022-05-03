@@ -1,43 +1,44 @@
 
 .productContainer {
-    border: 1px solid gray;
     flex: 1;
     margin: 5px;
-    min-width: 280px;
-    height: 350px;
+    width: 200px;
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: wheat;
+    background-color: rgb(241, 223, 185);
     flex-direction: column;
     position: relative;
+    box-shadow: -10px 0px 10px 1px #aaaaaa;
+    border-radius: 5px;;
 }
 
 .iconsContainer {
-    /* opacity: 0; */
-    width: 100%;
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: 5px;
 }
 
 .imageContainer {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 5px;
+  display: flex;
   width: 150px;
+  padding-top: 5px;
+  justify-content: center;
   
 }
 
 .imageContainer img {
-    height: 75%;
-    width: 75%;
+  width: 70%;
+  height: auto;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 .infoContainer {
-  width: 100%;
-  height: 100%;
+  width: 80;
+  height: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,0 +1,15 @@
+.checkoutContainer {
+    padding: 10px;
+    margin: 10px;
+}
+
+.checkoutContainer img {
+    width: 100%;
+    height: auto;
+}
+
+.checkoutContainer h1 {
+    padding-bottom: 10px;
+    text-align: center;
+  
+}

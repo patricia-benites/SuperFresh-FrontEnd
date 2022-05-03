@@ -47,7 +47,6 @@ export function Product({ id, image, title, description, price }) {
       </div>
       <div className={styles.infoContainer}>
         <h3>{title}</h3>
-        <p>{description}</p>
         <p>{` € ${price}`}</p>
       </div>
       <div className={styles.iconsContainer}>
