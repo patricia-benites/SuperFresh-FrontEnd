@@ -6,6 +6,7 @@ import styles from "./Cart.module.css";
 import CartProduct from "../../components/CartProduct/CartProduct";
 import SummaryItem from "../../components/SummaryItem/SummaryItem";
 import { Link, useNavigate } from "react-router-dom";
+import { Pay } from "../../components/Pay/Pay";
 
 export function Cart() {
   const { user } = useContext(AuthContext);
@@ -90,7 +91,6 @@ export function Cart() {
           </button>
           <div>
           </div>
-          <button onClick={()=>handleCheckout()}className={styles.rightButton}>CHECKOUT NOW</button>
         </div>
         <div className={styles.bottomContainer}>
           <div className={styles.infoContainer}>
@@ -119,7 +119,7 @@ export function Cart() {
               <SummaryItem text={"Shipping Discount"} value={"- 2.50"} />
             )}
             <SummaryItem type={"total"} text={"Total"} value={subtotal} />
-            <button  onClick={()=>handleCheckout()}className={styles.summaryButton}>CHECKOUT NOW</button>
+            <button  onClick={()=>handleCheckout()}className={styles.summaryButton}><Pay/></button>
           </div>
         </div>
       </div>
