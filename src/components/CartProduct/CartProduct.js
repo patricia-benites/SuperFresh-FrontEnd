@@ -1,13 +1,8 @@
 import React from "react";
 import styles from "./CartProduct.module.css";
-import { GrFormAdd, GrFormSubtract} from "react-icons/gr";
-import { useState } from "react/cjs/react.production.min";
+import { GrFormAdd, GrFormSubtract } from "react-icons/gr";
 
-export default function CartProduct({product, changeQuantity}) {
-  
-
-
-  console.log(product)
+export default function CartProduct({ product, changeQuantity }) {
   return (
     <div className={styles.cartProductContainer}>
       <div className={styles.productDetail}>
@@ -22,11 +17,25 @@ export default function CartProduct({product, changeQuantity}) {
       </div>
       <div className={styles.priceDetail}>
         <div className={styles.productAmountContainer}>
-          <button onClick={()=>{changeQuantity(product.productId._id, 1)}}><GrFormAdd /></button>
+          <button
+            onClick={() => {
+              changeQuantity(product.productId._id, 1);
+            }}
+          >
+            <GrFormAdd />
+          </button>
           <div>{product.quantity}</div>
-          <button onClick={()=>{changeQuantity(product.productId._id, -1)}}><GrFormSubtract/></button>
+          <button
+            onClick={() => {
+              changeQuantity(product.productId._id, -1);
+            }}
+          >
+            <GrFormSubtract />
+          </button>
         </div>
-        <div className={styles.productPrice}>{`$ ${product.productId.price}`}</div>
+        <div
+          className={styles.productPrice}
+        >{`$ ${product.productId.price}`}</div>
       </div>
     </div>
   );

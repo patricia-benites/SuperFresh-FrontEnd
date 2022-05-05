@@ -9,15 +9,12 @@ export function Product({ id, image, title, description, price }) {
 
   const addToCart = async () => {
     const existingCart = await client.get(`/carts/find/${user._id}`);
-    console.log(existingCart);
     let updatedProducts;
     if (existingCart.data) {
       const products = existingCart.data.products;
-      console.log(products);
       const isProductPresent = products.some(
         (product) => product.productId._id === id
       );
-      console.log(isProductPresent);
       if (isProductPresent) {
         updatedProducts = products.map((product) => {
           if (product.productId._id === id) {
@@ -50,7 +47,9 @@ export function Product({ id, image, title, description, price }) {
         <p>{` € ${price}`}</p>
       </div>
       <div className={styles.iconsContainer}>
-      <button><AiOutlineShoppingCart size="1em" onClick={addToCart} /></button>
+        <button>
+          <AiOutlineShoppingCart size="1em" onClick={addToCart} />
+        </button>
       </div>
     </div>
   );
