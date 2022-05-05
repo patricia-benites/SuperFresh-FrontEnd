@@ -4,7 +4,8 @@ import { useState, useEffect } from "react";
 import { client } from "../../client";
 import {useNavigate} from 'react-router-dom';
 
-export function Pay({amount}) {
+export function Pay({inputAmount}) {
+  console.log(inputAmount*100)
   const navigate = useNavigate();
   const REACT_APP_STRIPE_KEY =
     "pk_test_51KvQcwDksHGMxDrYrUT8M6tYkjFfZaDWjNdnafIKCjrCAVU5o9uRhoBan7kQBlllvLTuIB2yuCjJ4t1EAmmvY0uI00PkQ7pjZw";
@@ -17,11 +18,10 @@ export function Pay({amount}) {
       try {
         const response = await client.post("/stripe/payment", {
           tokenId: stripeToken.id,
-          amount: amount,
+          amount: inputAmount*100,
         });
         navigate("/checkout");
       } catch (error) {
-        console.log(error);
       }
     };
 
@@ -32,7 +32,7 @@ export function Pay({amount}) {
     <div>
       <StripeCheckout
         name="SuperFresh"
-        amount={amount*100}
+        amount={inputAmount*100}
         token={onToken}
         stripeKey={REACT_APP_STRIPE_KEY}
       />
