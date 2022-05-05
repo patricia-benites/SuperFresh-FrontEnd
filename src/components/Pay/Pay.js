@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { client } from "../../client";
 import {useNavigate} from 'react-router-dom';
 
-export function Pay() {
+export function Pay({amount}) {
   const navigate = useNavigate();
   const REACT_APP_STRIPE_KEY =
     "pk_test_51KvQcwDksHGMxDrYrUT8M6tYkjFfZaDWjNdnafIKCjrCAVU5o9uRhoBan7kQBlllvLTuIB2yuCjJ4t1EAmmvY0uI00PkQ7pjZw";
@@ -32,7 +32,7 @@ export function Pay() {
     <div>
       <StripeCheckout
         name="SuperFresh"
-        amount={2000}
+        amount={amount*100}
         token={onToken}
         stripeKey={REACT_APP_STRIPE_KEY}
       />

@@ -75,7 +75,7 @@ export function Cart() {
   },[cart])
 
   const handleCheckout = () => {
-    navigate("/checkout");
+    // navigate("/checkout");
     client.delete(`/carts/${cart._id}`)
   }
   
@@ -116,10 +116,10 @@ export function Cart() {
               <SummaryItem text={"Shipping Costs"} value={"5.50"} />
             )}
             {cart.products && (
-              <SummaryItem text={"Shipping Discount"} value={"- 2.50"} />
+              <SummaryItem text={"Shipping Discount"} value={"- 5.50"} />
             )}
             <SummaryItem type={"total"} text={"Total"} value={subtotal} />
-            <button  onClick={()=>handleCheckout()}className={styles.summaryButton}><Pay/></button>
+            <button  onClick={()=>handleCheckout()}className={styles.summaryButton}><Pay amount={subtotal}/></button>
           </div>
         </div>
       </div>

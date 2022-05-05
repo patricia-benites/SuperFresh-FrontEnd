@@ -24,7 +24,6 @@ ReactDOM.render(
             <Route path="logout" element={<Logout />} />
             <Route path="cart" element={<Cart />} />
             <Route path="checkout" element={<Checkout />} />
-            <Route path="pay" element={<Pay />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
