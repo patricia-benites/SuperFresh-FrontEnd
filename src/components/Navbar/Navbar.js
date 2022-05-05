@@ -17,7 +17,7 @@ export default function Navbar() {
             <AiOutlineSearch style={{color:"gray", fontSize: "16px"}}/>
           </div>
           <div className={styles.rightContainer}>
-            {user && <div className="user">
+            {user && <div>
               <span>Hello </span>
               <span>{user.firstName}</span>
             </div>}
