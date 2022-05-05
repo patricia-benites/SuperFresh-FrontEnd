@@ -17,7 +17,7 @@ export function Pay({amount}) {
       try {
         const response = await client.post("/stripe/payment", {
           tokenId: stripeToken.id,
-          amount: 2000,
+          amount: amount,
         });
         navigate("/checkout");
       } catch (error) {
